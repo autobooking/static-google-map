@@ -17,6 +17,7 @@ const mapStrategy = props => {
     language,
     signature,
     key,
+    map_id
   } = props;
 
   const urlParts = [];
@@ -35,6 +36,7 @@ const mapStrategy = props => {
   urlParts.push(urlBuilder('language', language, '='));
   urlParts.push(urlBuilder('signature', signature, '='));
   urlParts.push(urlBuilder('key', key, '='));
+  urlParts.push(urlBuilder('map_id', map_id, '='));
 
   const parts = urlParts.filter(x => x).join('&');
 
